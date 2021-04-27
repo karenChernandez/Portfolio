@@ -1,0 +1,231 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+import styled, {keyframes} from 'styled-components';
+import { Title2, Container2, pageTransition} from '../StyledComponents';
+import { FaGithub, FaLinkedin, FaEnvelope, FaTelegramPlane } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
+const initialFormState = {
+    subject: '',
+    name: '',
+    email: '',
+    text: ''
+};
+
+export default function Contact() {
+    const [form, setForm] = useState(initialFormState);
+    // const [sendEmail, setSendEmail] = useState(null)
+
+    const handleInput = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        axios.post('/api/sendEmail', form).then((res) => {
+            console.log('res?', res.data);
+        });
+    };
+
+    console.log('subject?', form.subject);
+    console.log('name?', form.name);
+    console.log('email?', form.email);
+    console.log('text?', form.text);
+    console.log('data?', form.data);
+    return (
+      <Container2>
+        {/* <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}> */}
+           <motion.div initial='out' animate='in' exit='out' variants={pageTransition}>
+            <Title2>Contact Info</Title2>
+
+            <ContactBox>
+                <Box>
+                    <form onSubmit={handleSubmit}>
+                        <ContactTitle>Get in Touch</ContactTitle>
+                        <Label>Your Name:</Label>
+                        <InputBox
+                            type='text'
+                            id='name'
+                            name='name'
+                            onChange={handleInput}
+                            value={form.name}
+                        />
+                        <br />
+                        <Label>Subject:</Label>
+                        <InputBox
+                            type='text'
+                            id='subject'
+                            name='subject'
+                            onChange={handleInput}
+                            value={form.subject}
+                        />
+                        <br />
+                        <Label>Email:</Label>
+                        <InputBox
+                            type='email'
+                            id='email'
+                            name='email'
+                            onChange={handleInput}
+                            value={form.email}
+                        />
+                        <br />
+                        <Label>You Message:</Label>
+                        <TextBox
+                            type='text'
+                            id='text'
+                            name='text'
+                            onChange={handleInput}
+                            value={form.text}
+                            cols='30'
+                            rows='10'
+                        />
+                        <br />
+                        <Button type='submit' onClick={handleSubmit}>
+                            Send it!
+                            <i>
+                                <FaTelegramPlane className='svg' />
+                            </i>
+                        </Button>
+                        <br />
+                    </form>
+                </Box>
+
+                <Box>
+                    <ContactTitle>My contact info!</ContactTitle>
+                    <div>
+                        <ContactInfo>
+                           <SocialMediaIcons><FaEnvelope/></SocialMediaIcons>
+                            <h2>Email:</h2>
+                            <h1>karenChernandez@live.com</h1>
+                        </ContactInfo>
+
+                        <ContactInfo>
+                            <SocialMediaIcons>
+                                <FaLinkedin/>
+                                </SocialMediaIcons>
+                            <h2>LinkedIn:</h2>
+                            <ALink href='https://www.linkedin.com/in/karen-hernandez-11541311a'>
+                                https://www.linkedin.com/in/karen-hernandez-11541311a/
+                            </ALink>
+                        </ContactInfo>
+                        <ContactInfo>
+                            <SocialMediaIcons><FaGithub /></SocialMediaIcons>
+                            <h2>GitHub:</h2>
+                            <ALink href='https://github.com/karenChernandez'>
+                                https://github.com/karenChernandez
+                            </ALink>
+                        </ContactInfo>
+                    </div>
+                </Box>
+            </ContactBox>
+        </motion.div>
+        </Container2>
+    );
+}
+
+const Label = styled.h1`
+    font-size: 20px;
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    padding-left: 20px;
+`;
+const ContactBox = styled.div`
+    width: 900px;
+    margin-left:80px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+`;
+
+const Box = styled.div`
+    width: 50%;
+    padding-bottom: 5%;
+    margin-left: 20px;
+`;
+
+const ContactTitle = styled.h1`
+    font-size:34px;
+    font-weight: 700;
+`;
+const InputBox = styled.input`
+    width: 90%;
+    height: 30px;
+    border: none;
+    /* background-color: lightgray; */
+    background-color: #5f48266b;
+`;
+
+const TextBox = styled.textarea`
+    width: 90%;
+    height: 30%;
+    border: none;
+    /* background-color: lightgray; */
+    background-color: #5f48266b;
+`;
+
+const ContactInfo = styled.section`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-between;
+    & h2 {
+        padding-left: 2px;
+        font-size:20px;
+        margin-right:5px;
+    }
+    & a:hover{
+        /* color: #654c29; */
+        text-decoration:underline;
+        font-size:20px;
+        
+    }
+`;
+const ALink = styled.a`
+    text-decoration: none;
+    color: white;
+    padding-left: 2px;
+    /* & a::after {
+        animation: anchor-underline 2s cubic-bezier(0, 0.5, 0, 1) infinite;
+        border-top: 1em solid #457dfb;
+    } */
+   
+`;
+const fly = keyframes`
+    0% {transform: translateX(0%)}
+    50% {transform: translateX(500%)}
+    100% {transform: translateX(0%)}
+`;
+const Button = styled.button`
+    background-color: #654c29;
+    border: none;
+    color: black;
+    padding: 5px;
+    border-radius: 10%;
+    width: 90%;
+    font-size: 20px;
+    font-family: bold;
+    margin-top: 2%;
+    margin-left: 2%;
+    & .svg {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 2px;
+}
+    &:hover .svg {
+  animation: ${fly} 2s ease 1;
+}
+  
+    
+`;
+const SocialMediaIcons= styled.i`
+font-size:25px;
+margin-right:3px;
+color:#5f48266b
+`
