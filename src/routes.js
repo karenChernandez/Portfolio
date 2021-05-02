@@ -9,8 +9,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 export const Routes = () => {
-    // const location = useLocation();
-    console.log('LOCATION', useLocation().pathname);
+    
     return (
         <AnimatePresence exitBeforeEnter>
             <Switch key={useLocation().pathname}>

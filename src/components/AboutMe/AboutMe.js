@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import pdf from '../../images/Full-StackSoftwareEngineerCopy.pdf';
+
 import { Title, Container, pageTransition } from '../StyledComponents';
 import { motion } from 'framer-motion';
 
@@ -34,7 +34,7 @@ export default function AboutMe() {
                     as Entry Level Software Engineer position, where I can use and expand my
                     knowledge. 
                     
-                    Please take a look at my <a href={pdf} type="Resume/PDF" target="_blank"> Resume</a>.
+                    Please take a look at my <a href={"https://docs.google.com/document/d/1Bs_AcqabonMY9W_fLDuYuoivyalXjxChgdWkyGolXEY/edit"} type="Resume/PDF" target="_blank"> Resume</a>.
                 </Content>
             </motion.div>
         </Container>

@@ -1,6 +1,6 @@
 import React from 'react';
 import profilePicII from '../../images/me.jpg';
-import pdf from '../../images/Full-StackSoftwareEngineerCopy.pdf';
+
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -14,6 +14,11 @@ export default function Menu() {
                 <Title>Karen Hernandez</Title>
                 <SubTitle>Full-Stack Software Engineer</SubTitle>
             </MenuHeader>
+            <Hamburger>
+                <span/>
+                <span/>
+                <span/>
+            </Hamburger>
 
             <LinkTabs>
                 <TabList>
@@ -40,7 +45,7 @@ export default function Menu() {
                         <TabLink href='/Contact'>Contact</TabLink>
                     </ListTap>
                     <ListTap>
-                        <ResumeLink href={pdf} type="Resume/PDF" target="_blank"> Download CV</ResumeLink>
+                        <ResumeLink href={"https://docs.google.com/document/d/1Bs_AcqabonMY9W_fLDuYuoivyalXjxChgdWkyGolXEY/edit"} type="Resume/Link" target="_blank"> Download CV</ResumeLink>
                         {/* <TabLink href='/Resume'>View Resume</TabLink> */}
                     </ListTap>
                 </TabList>
@@ -99,6 +104,21 @@ const SubTitle = styled.span`
     margin-bottom: 20px;
     /* text-shadow: 1px 1px 5px #1f1f1f; */
 `;
+
+const Hamburger= styled.div`
+    display:flex;
+    flex-direction:column;
+    cursor: pointer;
+
+    span{
+        height:2px;
+        width:25px;
+        background-color:#654c29;
+        margin-bottom:4px;
+        border-radius:5px;
+
+    }
+`
 
 const LinkTabs = styled.nav`
     width: 100%;
