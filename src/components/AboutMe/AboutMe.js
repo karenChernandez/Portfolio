@@ -1,18 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import { Title, Container, pageTransition } from '../StyledComponents';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 export default function AboutMe() {
     return (
         <Container>
-            {/* <motion.div
-                initial={{ opacity: 0, y:"-100vh" }}
-                animate={{ opacity: 1, y:0 }}
-                exit={{ opacity:0, y:"-100vh" }}
-            > */}
-            <motion.div initial='out' animate='in' exit='out' variants={pageTransition}>
+            {/* <motion.div initial='out' animate='in' exit='out' variants={pageTransition}> */}
                 <Title>About Me</Title>
                 <Quote>
                     "The capacity to learn is a gift; the ability to learn is a skill; the
@@ -34,36 +28,51 @@ export default function AboutMe() {
                     as Entry Level Software Engineer position, where I can use and expand my
                     knowledge. 
                     
-                    Please take a look at my <a href={"https://docs.google.com/document/d/1Bs_AcqabonMY9W_fLDuYuoivyalXjxChgdWkyGolXEY/edit"} type="Resume/PDF" target="_blank"> Resume</a>.
+                    Please take a look at my <a href={"https://docs.google.com/document/d/1Bs_AcqabonMY9W_fLDuYuoivyalXjxChgdWkyGolXEY/edit"} type="ResumeLink" target="_blank"> Resume</a>.
                 </Content>
-            </motion.div>
+            {/* </motion.div> */}
         </Container>
     );
 }
-
+// const ContainerBox= styled.div`
+// font-size:16px;
+// @media(min-width:360px) and (max-width:760px){
+//     justify-content: center;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     align-content: center;
+//     flex-wrap: wrap;
+//     }
+//     `
 const Quote = styled.h1`
     border-bottom: 4px solid #5f48266b;
     padding: 12px;
-    font-size:25px;
+    font-size:16px;
+@media(min-width:360px)and(max-width:760px){
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
     /* background: radial-gradient(black, transparent); */
 `;
 
 const Content = styled.h1`
     padding-top: 16px;
-    font-size: 16px;
+    font-size: 15px;
     padding-left: 10px;
     padding-right: 10px;
     & a{
         text-decoration:none;
         color:#654c29;
         /* color: #bc8c2d; */
-        font-size:19px;
+        font-size:16px;
 
     }
     a:hover{
         /* color: #654c29; */
         text-decoration:underline;
-        font-size:20px;
+        font-size:17px;
         
     }
     

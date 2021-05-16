@@ -3,12 +3,12 @@ import devMountain from './../../images/devMountainLogo.jpeg';
 import nau from './../../images/NAU1.png';
 import styled from 'styled-components';
 import { Title, Container3, pageTransition } from './../StyledComponents';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 export default function Education() {
     return (
         <EducationCont>
-             <motion.div initial='out' animate='in' exit='out' variants={pageTransition}>
+             {/* <motion.div initial='out' animate='in' exit='out' variants={pageTransition}> */}
                 <Title>Education</Title>
                 <Box>
                     <img src={devMountain} />
@@ -27,20 +27,26 @@ export default function Education() {
                         <h2>Business Administration</h2>
                     </div>
                 </Box>
-            </motion.div>
+            {/* </motion.div> */}
         </EducationCont>
     );
 }
 const EducationCont = styled.div`
     color: white;
     width: 100%;
-    font-size: 12px;
-    margin: 40px;
-    margin-top: 20px;
-    margin-left: 220px;
-    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 10px 30px 10px 230px;
+    font-size: 15px;
     background: radial-gradient(#00000052, transparent);
-    height: 11%;
+    height: 100%;
+@media(min-width:320px) and (max-width:760px){
+    position: relative;
+    margin: 45% 10px 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
 `;
 
 const Box = styled.div`
@@ -61,10 +67,10 @@ const Box = styled.div`
         height: 128px;
     }
     & h1 {
-        font-size: 34px;
+        font-size: 22px;
         font-weight: 700;
     }
-    & h3 {
-        font-size: 17px;
+    & h2 {
+        font-size: 15px;
     }
 `;

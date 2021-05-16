@@ -4,23 +4,23 @@ import zeppi from './../../images/zeppi.png';
 import myBookStore from './../../images/myBookStoreApp.png';
 import styled from 'styled-components';
 import { Title, Container2, pageTransition } from '../StyledComponents';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 export default function Projects() {
     return (
-        <motion.div initial='out' animate='in' exit='out' variants={pageTransition}>
+        // <motion.div initial='out' animate='in' exit='out' variants={pageTransition}>
                 <Container2>
                 <Title1>Projects</Title1>
 
                 <ProjectBox>
                     <div>
-                        <a href='https://zeppi.io/#/'>
+                        <a href='https://zeppi.site/'>
                             <ProjectImage src={zeppi} />
                         </a>
                     </div>
 
                     <ProjectText>
-                        <LinkTab href='https://zeppi.io/#/'>ZEPPI</LinkTab>
+                        <LinkTab href='https://zeppi.site/'>ZEPPI</LinkTab>
                         <p>
                             This is a collaborated project with Brenna Harden and Jacob McFadden.
                             ZEPPI is a location-based message web application with a twist of
@@ -59,26 +59,19 @@ export default function Projects() {
                     </ProjectText>
                 </ProjectBox>
         </Container2>
-            </motion.div>
+            // </motion.div>
     );
 }
 const Title1 = styled.h1`
-    font-size: 70px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: fit-content;
+    font-size: 30px;
     font-weight: 200;
-    width: 382px;
-    margin-left: 29%;
     margin-bottom: 20px;
     border-bottom: 4px solid white;
-    margin-top:20px;
 `;
-
-// const MainBox = styled.div`
-// color:white;
-// font-size:12px;
-// margin: 40px;
-// /* margin-top: 101px; */
-// padding: 16px;
-// `;
 const ProjectBox = styled.div`
     display: flex;
     flex-direction: row;
@@ -88,9 +81,18 @@ const ProjectBox = styled.div`
     align-content: center;
     /* background: radial-gradient(black, transparent); */
     margin-bottom: 23px;
-    font-size: 16px;
+    font-size: 15px;
     /* border-bottom: 4px solid #654c29; */
     border-bottom: 4px solid #5f48266b;
+@media(min-width:320px) and (max-width:760px){
+    margin:20px;
+    display: flex;
+    flex-direction: column;
+    & p {
+        width:100%;
+        padding:20px;
+    }
+}
 `;
 const ProjectImage = styled.img`
     width: 287px;
@@ -102,7 +104,9 @@ const ProjectImage = styled.img`
     -webkit-transition: opacity 0.25s ease-in-out;
     /* border: 3px black solid; */
     &:hover {
-        opacity: 1;
+        width:240px;
+        height:237px;
+        opacity: 1 ease-in-Out;
         /* @include easeOut; */
     }
 `;
@@ -112,10 +116,14 @@ const ProjectText = styled.div`
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 45px;
+    @media(min-width:320px) and (max-width:760px){
+    padding-top:15px;
+    height:250px;
+    }
 `;
 const LinkTab = styled.a`
     text-decoration: none;
     color: white;
-    font-size: 34px;
+    font-size: 22px;
     font-weight: 700;
 `;

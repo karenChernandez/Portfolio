@@ -3,7 +3,7 @@ import axios from 'axios';
 import styled, {keyframes} from 'styled-components';
 import { Title2, Container2, pageTransition} from '../StyledComponents';
 import { FaGithub, FaLinkedin, FaEnvelope, FaTelegramPlane } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 const initialFormState = {
     subject: '',
@@ -35,7 +35,7 @@ export default function Contact() {
     return (
       <Container2>
         {/* <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}> */}
-           <motion.div initial='out' animate='in' exit='out' variants={pageTransition}>
+           {/* <motion.div initial='out' animate='in' exit='out' variants={pageTransition}> */}
             <Title2>Contact Info</Title2>
 
             <ContactBox>
@@ -118,37 +118,45 @@ export default function Contact() {
                     </div>
                 </Box>
             </ContactBox>
-        </motion.div>
+        {/* </motion.div> */}
         </Container2>
     );
 }
 
 const Label = styled.h1`
-    font-size: 20px;
+    font-size: 16px;
     width: 100%;
     height: 30px;
     text-align: left;
     padding-left: 20px;
 `;
 const ContactBox = styled.div`
-    width: 900px;
-    margin-left:80px;
+    width: 100%;
     color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+    margin: 10px 30px 10px 230px;
+    @media(min-width:320px) and (max-width:760px){
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin:10px 30px;
+    }
 `;
 
 const Box = styled.div`
-    width: 50%;
+    /* width: 50%; */
     padding-bottom: 5%;
     margin-left: 20px;
 `;
 
 const ContactTitle = styled.h1`
-    font-size:34px;
+    font-size:22px;
     font-weight: 700;
 `;
 const InputBox = styled.input`
@@ -168,7 +176,7 @@ const TextBox = styled.textarea`
 `;
 
 const ContactInfo = styled.section`
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -177,13 +185,16 @@ const ContactInfo = styled.section`
     align-content: space-between;
     & h2 {
         padding-left: 2px;
-        font-size:20px;
+        font-size:15px;
         margin-right:5px;
+    }
+    & h1{
+        font-size:14px;
     }
     & a:hover{
         /* color: #654c29; */
         text-decoration:underline;
-        font-size:20px;
+        font-size:14px;
         
     }
 `;
@@ -209,7 +220,7 @@ const Button = styled.button`
     padding: 5px;
     border-radius: 10%;
     width: 90%;
-    font-size: 20px;
+    font-size: 15px;
     font-family: bold;
     margin-top: 2%;
     margin-left: 2%;
@@ -225,7 +236,7 @@ const Button = styled.button`
     
 `;
 const SocialMediaIcons= styled.i`
-font-size:25px;
+font-size:20px;
 margin-right:3px;
 color:#5f48266b
 `

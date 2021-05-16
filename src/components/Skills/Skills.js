@@ -14,13 +14,13 @@ import {
     SiGit,
     SiGithub
 } from 'react-icons/si';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 export default function Skills() {
     return (
         <Container3>
             {/* <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}> */}
-             <motion.div initial='out' animate='in' exit='out' variants={pageTransition}>
+             {/* <motion.div initial='out' animate='in' exit='out' variants={pageTransition}> */}
                 <Title>My Skill Set</Title>
                 <Box>
                     <BoxTitle>HTML</BoxTitle>
@@ -147,7 +147,7 @@ export default function Skills() {
                         ></span>
                     </Icons>
                 </Box>
-            </motion.div>
+            {/* </motion.div> */}
         </Container3>
     );
 }
@@ -160,7 +160,7 @@ const Box = styled.div`
 `;
 const BoxTitle = styled.h1`
     border-bottom: 4px solid #5f48266b;
-    font-size: 34px;
+    font-size: 22px;
     text-align: left;
     padding-bottom: 10px;
     margin: 10px;

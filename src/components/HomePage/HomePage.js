@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import profilePicII from '../../images/profilePic.jpg';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { pageTransition } from '../StyledComponents';
 
 export default function HomePage() {
+    
     return (
-        // <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-        <motion.div initial='out' animate='in' exit='out' variants={pageTransition}>
+        // <motion.div initial='out' animate='in' exit='out' variants={pageTransition}>
             <HomeCover>
                 <Home>
                     <Me src={profilePicII} />
@@ -29,48 +29,47 @@ export default function HomePage() {
                     </Intro>
                 </Home>
             </HomeCover>
-        </motion.div>
+        // </motion.div>
     );
 }
 const HomeCover = styled.div`
     background-color: #141515;
     margin-left: 190px;
+    @media(min-width:360px) and (max-width:760px){
+    margin-left:0px;
+    overflow:hidden;
+    }
+    
 `;
 const Home = styled.div`
     height:100%;
-    position: relative;
-    z-index:2;
+    /* position: relative;
+    z-index:2; */
     color:whitesmoke;
-    /* transition: 2s; */
-    /* transform:scale(1.0); */
+    
      & :hover{
         filter:blur(0px);
-        transition: 2s;
-        /* color:whitesmoke; */
-        /* transform:scale(1.2); */
-        
+        transition: 2s; 
     }
 
-     & img {
-        /* filter:blur(0px);
-        transition: 2s; */
+     & img { 
         transform:scale(1.2);
         transition: 3s;
-       
     }
     & div:hover ~ img{
         filter:blur(0px);
         /* transform:scale(1.2);
         transition: 3s; */
     }
+     @media(min-width:360px) and (max-width:760px){
+    z-index:none;
+    }
+   
 `;
 
 const Me = styled.img`
-    /* position:absolute; */
-    /* pointer-events:none;
-    filter:blur(10px); */
-filter:blur(20px);
- transition: 2s;
+    filter:blur(20px);
+    transition: 2s;
     height: 93vh;
     width: 54%;
     margin-left: 386px;
@@ -80,11 +79,13 @@ filter:blur(20px);
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
-   
+   @media(min-width:360px) and (max-width:760px){
+    display:none;
+    }
 `;
 
 const Intro = styled.div`
-    position: absolute;
+    /* position: absolute; */
     margin-top: 138px;
     margin-left: 28px;
     transform: translate(0%, -320%);
@@ -94,6 +95,18 @@ const Intro = styled.div`
     line-height: 99px;
     width: 633px;
     height: 230px;
+    @media(min-width:360px) and (max-width:760px){
+            position:relative;
+            display:flex;
+            align-items:center;
+            align-content:center;
+            justify-content:flex-start;
+            flex-direction:column;
+            margin-top:30%;
+            width:100%;
+            margin-left:0px;
+            transform:none;
+        }
 `;
 const IntroII = styled.h3`
     font-size: 16px;
@@ -105,16 +118,25 @@ const IntroII = styled.h3`
         /* color: #654c29; */
         text-decoration:underline;
         font-size:20px;
-        
+    }
+    @media(min-width:360px) and (max-width:760px){
+    font-size: 15px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+    justify-content:flex-start;
+    /* width: 362px; */
+    /* height: 178px; */
+    line-height: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    /* transform: translate(-8%, 447%); */
     }
 `;
 const Title = styled.mark`
-    /* position:relative;
-    z-index:2;
-    transition: 2s; */
-
     background: radial-gradient(black, transparent);
-    /* color: #654c29; */
     color:whitesmoke;
     border-radius: 50% 0%;
     box-shadow: 0 0 6px #5f4826, 0 0 3px #0000000a;
@@ -124,7 +146,18 @@ const Title = styled.mark`
     &:nth-of-type(2) span {
         background-clip: content-box;
     }
-    & 
+    @media(min-width:360px) and (max-width:760px){
+    /* display:none; */
+    flex-direction:column;
+    justify-content:start;
+    align-items:center;
+    align-content:center;
+    font-size:20px;
+    line-height:30px; 
+    margin-top:15%;
+    width:100%;
+    }
+    
 `;
 
 
@@ -133,4 +166,7 @@ const LearnMore = styled.a`
     font-weight: 600;
     color: #654c29;
     text-decoration:none;
+     @media(min-width:360px) and (max-width:760px){
+            font-size:15px;
+        }
 `;

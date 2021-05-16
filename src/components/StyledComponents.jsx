@@ -1,45 +1,97 @@
 import styled from 'styled-components';
 
 export const Title = styled.h1`
-margin:0px;
-font-size: 70px;
-font-weight: 200;
-width: fit-content;
-margin-left: 304px;
-border-bottom: 4px solid white;
-margin-bottom:20px;
-color:white;
+    margin:0px;
+    font-size: 30px;
+    font-weight: 200;
+    width: fit-content;
+    display: flex;
+    align-self: center;
+    border-bottom: 4px solid white;
+    margin-bottom:20px;
+    margin-top:20px;
+    color:white;
+    @media(min-width:360px) and (max-width:760px){
+        /* margin-top:55%; */
+    margin-bottom:20px;
+    }
 `
 export const Title2= styled(Title)`
-margin-left:300px;
-margin-top:20px;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top:20px;
 `
 export const Container = styled.div`
-color:white;
-font-size:16px;
-margin: 20px 30px 20px 220px;
-height: auto;
-background: radial-gradient(#141515, transparent);
-border: 5px solid #5f48266b;
-width:100%;
+    color:white;
+    font-size:15px;
+    padding-right: 20px;
+    padding-left:20px;
+    background: radial-gradient(#141515, transparent);
+    border: 5px solid #5f48266b;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap:nowrap;
+    margin: 10px 30px 10px 230px;
+
+@media(min-width:320px) and (max-width:760px){
+    position:relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 45% 10px 10px 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    }
 `
 export const Container2= styled.div`
-color:white;
-font-size:16px;
-width:100%;
-height:100%;
-margin: 0px 30px 20px 220px;
-overflow-y:scroll;
+    color:white;
+    font-size:16px;
+    width:100%;
+    margin: 10px 30px 10px 230px;
+    overflow-y:scroll;
+    display: flex;
+    flex-wrap:nowrap;
+    flex-direction: column;
+    align-content: center;
+
+    align-items:center;
+
+    @media(min-width:320px) and (max-width:760px){
+    position: relative;
+    margin: 43% 10px 10px;
+    }
+
 
 `
 export const Container3= styled.div`
-color:white;
-font-size:16px;
-width:100%;
-height: 100%;
-margin: 20px 30px 20px 220px;
-overflow-y:scroll;
-padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap:nowrap;
+    margin: 10px 30px 10px 230px;
+    color:white;
+    font-size:15px;
+    width:100%;
+    /* height: 100%; */
+    overflow-y:scroll;
+    padding-bottom: 20px;
+    @media(min-width:320px) and (max-width:760px){
+    position:relative;
+    margin: 41% 10px 10px;
+    }
 `
 
 export const pageTransition= {

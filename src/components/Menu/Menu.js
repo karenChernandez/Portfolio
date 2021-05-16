@@ -1,26 +1,26 @@
-import React from 'react';
+import React,{useState}from 'react';
 import profilePicII from '../../images/me.jpg';
-
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 
 export default function Menu() {
+    const [MenuOpen, setMenuOpen]= useState(false);
     return (
         <MenuTap>
-            <MenuHeader>
+            <MenuHeader >
                 <ProfilePic src={profilePicII} />
                 <Title>Karen Hernandez</Title>
                 <SubTitle>Full-Stack Software Engineer</SubTitle>
             </MenuHeader>
-            <Hamburger>
+            <Hamburger onClick={()=>setMenuOpen(!MenuOpen)}>
                 <span/>
                 <span/>
                 <span/>
             </Hamburger>
 
-            <LinkTabs>
+            <LinkTabs MenuOpen={MenuOpen}>
                 <TabList>
                     <ListTap>
                         <TabLink  href='/'>Home</TabLink>
@@ -45,7 +45,7 @@ export default function Menu() {
                         <TabLink href='/Contact'>Contact</TabLink>
                     </ListTap>
                     <ListTap>
-                        <ResumeLink href={"https://docs.google.com/document/d/1Bs_AcqabonMY9W_fLDuYuoivyalXjxChgdWkyGolXEY/edit"} type="Resume/Link" target="_blank"> Download CV</ResumeLink>
+                        <TabLink href={"https://docs.google.com/document/d/1Bs_AcqabonMY9W_fLDuYuoivyalXjxChgdWkyGolXEY/edit"} type="ResumeLink" target="_blank"> Download CV</TabLink>
                         {/* <TabLink href='/Resume'>View Resume</TabLink> */}
                     </ListTap>
                 </TabList>
@@ -62,12 +62,19 @@ const Title = styled.h1`
     line-height: 25px;
     padding-top: 2px;
     padding-bottom: 15px;
+    /* @media(max-width:760px){
+        display:none; 
+    } */
 `;
 const ProfilePic = styled.img`
     height: 81px;
     width: 91px;
     border-radius: 37px;
     border: 3px solid #654c29;
+ /* @media(max-width:760px){
+        display:none; 
+    } */
+     
 `;
 const MenuTap = styled.div`
     background-image: url('https://images.unsplash.com/photo-1486961927870-395253783824?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTY3fHxjYWN0dXMlMjBncmF5c2NhbGV8ZW58MHx8MHxibGFjaw%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
@@ -84,33 +91,52 @@ const MenuTap = styled.div`
     align-content: space-between;
     opacity: 10px;
     height: 100%;
-    width: 190px;
+    width: 200px;
     position: fixed;
     background-color: #1f1f1f;
     box-shadow: 0 0 15px 1px #654c29;
+    @media(max-width:760px){
+        width: 100%;
+        position:absolute;
+    } 
+    
 `;
 
 const MenuHeader = styled.span`
+    
     width: 100%;
-    height: 167px;
+    height: 180px;
     padding-top: 27px;
     padding-right: 10px;
     padding-bottom: 10px;
+    
+    @media(max-width:760px){
+        padding-top:10px;
+        height: 0;
+        border-top-width: 10px;
+    }
+    
+
 `;
 const SubTitle = styled.span`
     width: 100%;
     font-size: 16px;
     font-weight: bolder;
     margin-bottom: 20px;
+    /* @media(max-width:760px){
+        display:none; 
+    } */
     /* text-shadow: 1px 1px 5px #1f1f1f; */
 `;
 
 const Hamburger= styled.div`
-    display:flex;
+    display:none;
     flex-direction:column;
     cursor: pointer;
-
+    margin-bottom:120px;
+    margin-left: 90%;
     span{
+        /* margin-left: 340px; */
         height:2px;
         width:25px;
         background-color:#654c29;
@@ -118,7 +144,13 @@ const Hamburger= styled.div`
         border-radius:5px;
 
     }
-`
+    @media(max-width:760px) and (min-width:360px){
+        display:flex;
+        flex-direction:end;
+        /* margin-bottom:120px; */
+        /* margin-left:-15px; */
+    }
+`;
 
 const LinkTabs = styled.nav`
     width: 100%;
@@ -127,18 +159,46 @@ const LinkTabs = styled.nav`
     padding-bottom: 10px;
     margin: 51px 0px 10px;
 
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    
+    
+@media(max-width:760px){
+    margin-bottom: 0px;
+    overflow:hidden;
+    flex-direction:column;
+    width:100%;
+    background:rgb(95 72 38 / 92%);
+    /* background:#654c29; */
+    margin-top: 10px;
+    padding-bottom: 0px;
+    max-height:${({MenuOpen})=>(MenuOpen ? "370px" : "0") };
+    transition: max-height 0.3s ease-in;
+    z-index:${({MenuOpen})=>(MenuOpen ? "2" : "none" ) };
+    position:relative;
+};
 `;
 const TabLink = styled.a`
     text-decoration: none;
     color: white;
     text-shadow: 1px 1px 5px rgb(0 0 0 / 50%);
+    &:hover{
+       color:#654c29; 
+       font-weight:800;
+    }
 
 `;
 const ListTap = styled.li`
     padding: 22px 0 12px;
     font-size: 21.5px;
     padding-left: 40px;
-        
+        @media(max-width:760px){
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    }
 `;
 
 const TabList = styled.ul`
@@ -154,24 +214,23 @@ const TabList = styled.ul`
     border-top-style: solid;
     color: #654c29;
     height: 100%;
+    width:100%;
     list-style: none;
-    & li:hover{
-    text-decoration: underline;
-    transition:0.3s;
-    
-    }
     /* & a :hover:after{
         content:'';
         text-decoration: underline;
-        color:#654c29;
         transition:0.3s;
     } */
+    @media(max-width:760px){
+    align-items: stretch;
+    width: 100%;
+    }
 `;
-const ResumeLink=styled.a`
-text-decoration:none;
-color:white;
-font-size:20px;
-`
+// const ResumeLink=styled.a`
+// text-decoration:none;
+// color:white;
+// font-size:20px;
+// `
 // const Button = styled.button`
 //     background-color: black;
 //     color: WHITE;
