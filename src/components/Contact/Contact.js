@@ -150,9 +150,13 @@ const ContactBox = styled.div`
 `;
 
 const Box = styled.div`
-    /* width: 50%; */
+    width: 50%;
     padding-bottom: 5%;
     margin-left: 20px;
+    @media(min-width:320px) and (max-width:760px){
+        width:100%;
+        margin-left:0px;
+    }
 `;
 
 const ContactTitle = styled.h1`
@@ -160,6 +164,8 @@ const ContactTitle = styled.h1`
     font-weight: 700;
 `;
 const InputBox = styled.input`
+    color:whitesmoke;
+    font-size:15px;
     width: 90%;
     height: 30px;
     border: none;
@@ -179,7 +185,7 @@ const ContactInfo = styled.section`
     /* width: 100%; */
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     align-content: space-between;
@@ -197,6 +203,7 @@ const ContactInfo = styled.section`
         font-size:14px;
         
     }
+    
 `;
 const ALink = styled.a`
     text-decoration: none;

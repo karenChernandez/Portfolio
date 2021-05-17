@@ -12,7 +12,7 @@ export default function Menu() {
             <MenuHeader >
                 <ProfilePic src={profilePicII} />
                 <Title>Karen Hernandez</Title>
-                <SubTitle>Full-Stack Software Engineer</SubTitle>
+                <SubTitle>Full-Stack Software Developer</SubTitle>
             </MenuHeader>
             <Hamburger onClick={()=>setMenuOpen(!MenuOpen)}>
                 <span/>

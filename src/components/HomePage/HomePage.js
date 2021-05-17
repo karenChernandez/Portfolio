@@ -13,16 +13,15 @@ export default function HomePage() {
                     <Me src={profilePicII} />
                     <Intro>
                         <Title>
-                            {/* Hi my name is Karen and I'm a Full-Stack Software Engineer. Welcome to my
-                        Portfolio! */}
-                            Welcome, I'm <br />
-                            Karen Hernandez!
+                            Hello! Welcome <br/>to my personal portfolio!
+                            {/* Welcome, I'm <br />
+                            Karen Hernandez! */}
                         </Title>
                         <IntroII>
                             I am a Full-Stack Software Developer with a Bachelors Degree in
                             Business. I recently graduated from DevMoutain, a coding bootcamp. I
                             have an extensive background in various frontend and backend
-                            technologies such as JavaScript, React, NodeJS, PostgreSQL and more.
+                            technologies such as JavaScript, React, NodeJS, PostgreSQL, HTML, CSS and more.
                             <br />
                             <LearnMore href='/AboutMe'>Learn more</LearnMore>
                         </IntroII>
@@ -129,8 +128,8 @@ const IntroII = styled.h3`
     /* width: 362px; */
     /* height: 178px; */
     line-height: 22px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     position: relative;
     /* transform: translate(-8%, 447%); */
     }
