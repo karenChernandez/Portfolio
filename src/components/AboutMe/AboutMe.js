@@ -10,8 +10,7 @@ export default function AboutMe() {
                 <Title>About Me</Title>
                 <Quote>
                     "The capacity to learn is a gift; the ability to learn is a skill; the
-                    willingness to learn is a choice" <br />
-                    by Brian Herbert.
+                    willingness to learn is a choice" by Brian Herbert.
                 </Quote>
                 <Content>
                     Hi my name is Karen, I am a Full-Stack Software Developer with a Bachelors
@@ -46,9 +45,11 @@ export default function AboutMe() {
 //     }
 //     `
 const Quote = styled.h1`
+    font-family: 'Bad Script', cursive;
     border-bottom: 4px solid #5f48266b;
     padding: 12px;
     font-size:16px;
+    line-height:25px;
 @media(min-width:360px)and(max-width:760px){
     font-size: 15px;
     margin-top: 0px;

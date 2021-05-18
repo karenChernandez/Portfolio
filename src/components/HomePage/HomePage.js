@@ -13,9 +13,9 @@ export default function HomePage() {
                     <Me src={profilePicII} />
                     <Intro>
                         <Title>
-                            Hello! Welcome <br/>to my personal portfolio!
-                            {/* Welcome, I'm <br />
-                            Karen Hernandez! */}
+                            {/* Hello! Welcome <br/>to my personal portfolio! */}
+                            Welcome, I'm <br />
+                            Karen Hernandez! 
                         </Title>
                         <IntroII>
                             I am a Full-Stack Software Developer with a Bachelors Degree in
@@ -125,7 +125,7 @@ const IntroII = styled.h3`
     align-items:center;
     align-content:center;
     justify-content:flex-start;
-    /* width: 362px; */
+    width: 380px;
     /* height: 178px; */
     line-height: 22px;
     padding-left: 30px;

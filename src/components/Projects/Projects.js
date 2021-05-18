@@ -89,8 +89,10 @@ const ProjectBox = styled.div`
     display: flex;
     flex-direction: column;
     & p {
-        width:100%;
+        /* width:100%; */
         padding:20px;
+        margin:0;
+        justify-content:center;
     }
 }
 `;
@@ -117,8 +119,10 @@ const ProjectText = styled.div`
     padding-right: 10px;
     padding-top: 45px;
     @media(min-width:320px) and (max-width:760px){
+    width:100%;
     padding-top:15px;
-    height:250px;
+    justify-content:center;
+
     }
 `;
 const LinkTab = styled.a`
