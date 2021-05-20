@@ -172,7 +172,7 @@ const LinkTabs = styled.nav`
     width:100%;
     background:rgb(95 72 38 / 92%);
     /* background:#654c29; */
-    margin-top: 10px;
+    margin-top: 5px;
     padding-bottom: 0px;
     max-height:${({MenuOpen})=>(MenuOpen ? "370px" : "0") };
     transition: max-height 0.3s ease-in;
