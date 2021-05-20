@@ -42,7 +42,7 @@ export const Container = styled.div`
 @media(min-width:320px) and (max-width:760px){
     backdrop-filter: brightness(0.2);
     border-top:4px solid #654c29;
-    height: 100%;
+    /* height: 100%; */
     position:relative;
     justify-content: center;
     display: flex;

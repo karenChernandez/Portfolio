@@ -22,8 +22,7 @@ export default function Projects() {
                     <ProjectText>
                         <LinkTab href='https://zeppi.site/'>ZEPPI</LinkTab>
                         <p>
-                            This is a collaborated project with Brenna Harden and Jacob McFadden.
-                            ZEPPI is a location-based message web application with a twist of
+                            This is a collaborated project with two fellow students.  ZEPPI is a location-based message web application with a twist of
                             creativity. This application uses maps, geolocation and messaging to
                             give users an easy and fun way to communicate. Users send(drop) or
                             receive(loot) messages from friends which can be claimed on a map.

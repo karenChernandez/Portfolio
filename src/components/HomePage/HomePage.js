@@ -18,11 +18,13 @@ export default function HomePage() {
                             to my portfolio! 
                         </Title>
                         <IntroII>
-                            I am a Full-Stack Software Developer with a Bachelors Degree in
+                            I am full-stack web-developer from PHX, AZ. My tech stack is PERN and I enjoy creating web applications from the ground up.
+                            {/* I am a Full-Stack Software Developer with a Bachelors Degree in
                             Business. I recently graduated from DevMoutain, a coding bootcamp. I
                             have an extensive background in various frontend and backend
-                            technologies such as JavaScript, React, NodeJS, PostgreSQL, HTML, CSS and more.
-                            <br />
+                            technologies such as JavaScript, React, NodeJS, PostgreSQL, HTML, CSS and more. */}
+                            {/* <br /> */}
+
                             <LearnMore href='/AboutMe'>Learn more</LearnMore>
                         </IntroII>
                     </Intro>

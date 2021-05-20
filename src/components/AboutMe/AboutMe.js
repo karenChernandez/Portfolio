@@ -17,7 +17,7 @@ export default function AboutMe() {
                     Degree in Business. I recently graduated from DevMoutain, a coding Bootcamp. I
                     have an extensive background in various frontend and backend technologies,
                     developed websites and web applications from the ground up. Specializes in
-                    JavaScript, React, Redux, Node.js, PostgreSQL, and Express. Professional
+                    JavaScript, React, Redux, Node.js, PostgreSQL, Express, HTML5 and CSS. Professional
                     strengths include creative problem-solving and time management. A
                     Detail-oriented mindset from 8 years of experience in the Finance industry.
                 </Content>
