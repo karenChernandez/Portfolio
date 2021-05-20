@@ -42,10 +42,19 @@ const EducationCont = styled.div`
     background: radial-gradient(#00000052, transparent);
     height: 100%;
 @media(min-width:320px) and (max-width:760px){
+    backdrop-filter: brightness(0.2);
+    border-top:4px solid #654c29;
     position: relative;
-    margin: 45% 10px 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    margin-top: 45%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    height:auto;
 }
 `;
 

@@ -40,6 +40,9 @@ export const Container = styled.div`
     margin: 10px 30px 10px 230px;
 
 @media(min-width:320px) and (max-width:760px){
+    backdrop-filter: brightness(0.2);
+    border-top:4px solid #654c29;
+    height: 100%;
     position:relative;
     justify-content: center;
     display: flex;
@@ -58,18 +61,28 @@ export const Container2= styled.div`
     color:white;
     font-size:16px;
     width:100%;
+    /* margin: 45% 10px 10px 10px; */
     margin: 10px 30px 10px 230px;
     overflow-y:scroll;
     display: flex;
     flex-wrap:nowrap;
     flex-direction: column;
     align-content: center;
-
     align-items:center;
 
     @media(min-width:320px) and (max-width:760px){
+    backdrop-filter: brightness(0.2);
+    border-top:4px solid #654c29;
     position: relative;
-    margin: 43% 10px 10px;
+    margin-bottom:0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: auto;
+    margin-bottom: 10px;
+    /* margin: 43% 10px 10px; */
+    margin-top:45%;
     }
 
 

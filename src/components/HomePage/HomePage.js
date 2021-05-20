@@ -14,8 +14,8 @@ export default function HomePage() {
                     <Intro>
                         <Title>
                             {/* Hello! Welcome <br/>to my personal portfolio! */}
-                            Welcome, I'm <br />
-                            Karen Hernandez! 
+                            Hello World!, Welcome <br />
+                            to my portfolio! 
                         </Title>
                         <IntroII>
                             I am a Full-Stack Software Developer with a Bachelors Degree in
@@ -35,8 +35,9 @@ const HomeCover = styled.div`
     background-color: #141515;
     margin-left: 190px;
     @media(min-width:360px) and (max-width:760px){
-    margin-left:0px;
     overflow:hidden;
+    margin-top:0px;
+    margin: 10px;
     }
     
 `;
@@ -62,6 +63,8 @@ const Home = styled.div`
     }
      @media(min-width:360px) and (max-width:760px){
     z-index:none;
+    backdrop-filter: brightness(0.2);
+    height: 100%;
     }
    
 `;
@@ -95,13 +98,14 @@ const Intro = styled.div`
     width: 633px;
     height: 230px;
     @media(min-width:360px) and (max-width:760px){
+            border-top:4px solid #654c29;
             position:relative;
             display:flex;
             align-items:center;
             align-content:center;
             justify-content:flex-start;
             flex-direction:column;
-            margin-top:30%;
+            margin-top:50%;
             width:100%;
             margin-left:0px;
             transform:none;
@@ -146,15 +150,14 @@ const Title = styled.mark`
         background-clip: content-box;
     }
     @media(min-width:360px) and (max-width:760px){
-    /* display:none; */
     flex-direction:column;
     justify-content:start;
     align-items:center;
     align-content:center;
     font-size:20px;
     line-height:30px; 
-    margin-top:15%;
-    width:100%;
+    margin-top:3%;
+    width:95%;
     }
     
 `;
