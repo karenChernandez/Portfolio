@@ -103,7 +103,8 @@ export const Container3= styled.div`
     padding-bottom: 20px;
     @media(min-width:320px) and (max-width:760px){
     position:relative;
-    margin: 41% 10px 10px;
+    margin: 45% 10px 10px;
+    padding-bottom: 10px;
     }
 `
 

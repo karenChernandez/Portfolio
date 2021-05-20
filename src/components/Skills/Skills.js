@@ -157,6 +157,9 @@ const Box = styled.div`
     padding-bottom: 10px;
     margin-bottom: 20px;
     border: 4px solid #5f48266b;
+    @media(min-width:320px) and (max-width:760px){
+    backdrop-filter: brightness(0.2);
+    }
 `;
 const BoxTitle = styled.h1`
     border-bottom: 4px solid #5f48266b;
