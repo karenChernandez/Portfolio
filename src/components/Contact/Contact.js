@@ -138,9 +138,11 @@ const ContactBox = styled.div`
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-    margin: 10px 30px 10px 230px;
-    @media(min-width:320px) and (max-width:760px){
+    margin-top:3%;
+    /* margin: 10px 30px 10px 230px; */
+    @media(min-width:320px) and (max-width:768px){
     display: flex;
+    flex-wrap:wrap;
     flex-direction: column;
     align-content: center;
     justify-content: flex-start;
@@ -153,7 +155,7 @@ const Box = styled.div`
     width: 50%;
     padding-bottom: 5%;
     margin-left: 20px;
-    @media(min-width:320px) and (max-width:760px){
+    @media(min-width:320px) and (max-width:768px){
         width:100%;
         margin-left:0px;
     }

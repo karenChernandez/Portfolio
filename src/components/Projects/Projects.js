@@ -22,7 +22,7 @@ export default function Projects() {
                     <ProjectText>
                         <LinkTab href='https://zeppi.site/'>ZEPPI</LinkTab>
                         <p>
-                            This is a collaborated project with two fellow students.  ZEPPI is a location-based message web application with a twist of
+                            This is a collaborated project with two fellow students.ZEPPI is a location-based message web application with a twist of
                             creativity. This application uses maps, geolocation and messaging to
                             give users an easy and fun way to communicate. Users send(drop) or
                             receive(loot) messages from friends which can be claimed on a map.
@@ -83,10 +83,11 @@ const ProjectBox = styled.div`
     font-size: 15px;
     /* border-bottom: 4px solid #654c29; */
     border-bottom: 4px solid #5f48266b;
-@media(min-width:320px) and (max-width:760px){
+@media(min-width:320px) and (max-width:768px){
     margin:20px;
     display: flex;
     flex-direction: column;
+    flex-wrap:wrap;
     & p {
         /* width:100%; */
         padding:20px;
@@ -117,7 +118,7 @@ const ProjectText = styled.div`
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 45px;
-    @media(min-width:320px) and (max-width:760px){
+    @media(min-width:320px) and (max-width:768px){
     width:100%;
     padding-top:15px;
     justify-content:center;

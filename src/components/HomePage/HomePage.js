@@ -14,7 +14,7 @@ export default function HomePage() {
                     <Intro>
                         <Title>
                             {/* Hello! Welcome <br/>to my personal portfolio! */}
-                            Hello World!, Welcome <br />
+                            Hello World! Welcome <br />
                             to my portfolio! 
                         </Title>
                         <IntroII>
@@ -45,8 +45,6 @@ const HomeCover = styled.div`
 `;
 const Home = styled.div`
     height:100%;
-    /* position: relative;
-    z-index:2; */
     color:whitesmoke;
     
      & :hover{
@@ -67,6 +65,7 @@ const Home = styled.div`
     z-index:none;
     backdrop-filter: brightness(0.2);
     height: 100%;
+     
     }
    
 `;
@@ -84,21 +83,20 @@ const Me = styled.img`
     background-size: cover;
     background-position: center;
    @media(min-width:360px) and (max-width:760px){
-    display:none;
-    }
+    display:none;}
+   @media(min-width:761px) and (max-width:1024px){
+    margin-left:0px;
+   }  
+    
 `;
 
 const Intro = styled.div`
     /* position: absolute; */
-    margin-top: 138px;
+    margin-top: 43%;
     margin-left: 28px;
     transform: translate(0%, -320%);
-    font-size: 70px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 99px;
-    width: 633px;
-    height: 230px;
+    width: 535px;
+    height: 321px;
     @media(min-width:360px) and (max-width:760px){
             border-top:4px solid #654c29;
             position:relative;
@@ -112,10 +110,18 @@ const Intro = styled.div`
             margin-left:0px;
             transform:none;
         }
+    @media(min-width:761px) and (max-width:1024px){
+    margin-top:0px;
+    margin-left:0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(5%, -119%);
+    }
 `;
 const IntroII = styled.h3`
     font-size: 16px;
-    width: 424px;
+    width: 341px;
     height: 155px;
     line-height: 22px;
     color: white;
@@ -125,22 +131,26 @@ const IntroII = styled.h3`
         font-size:20px;
     }
     @media(min-width:360px) and (max-width:760px){
-    font-size: 15px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    align-content:center;
-    justify-content:flex-start;
-    width: 380px;
-    /* height: 178px; */
-    line-height: 22px;
-    padding-left: 30px;
-    padding-right: 30px;
-    position: relative;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        align-content:center;
+        justify-content:flex-start;
+        width: 380px;
+        font-size: 15px;
+        line-height: 22px;
+        padding-left: 30px;
+        padding-right: 30px;
+        position: relative;
+        margin-top: 39px;
     /* transform: translate(-8%, 447%); */
     }
 `;
 const Title = styled.mark`
+    font-size:48px;
+    line-height:75px;
+    font-style: italic;
+    font-weight: 400;
     background: radial-gradient(black, transparent);
     color:whitesmoke;
     border-radius: 50% 0%;
@@ -158,8 +168,12 @@ const Title = styled.mark`
     align-content:center;
     font-size:20px;
     line-height:30px; 
-    margin-top:3%;
+    margin-top:10%;
     width:95%;
+    }
+    @media(min-width:761px) and (max-width:1024px){
+        font-size:40px;
+        line-height:55px;
     }
     
 `;

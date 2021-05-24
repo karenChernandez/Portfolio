@@ -8,6 +8,7 @@ export default function AboutMe() {
         <Container>
             {/* <motion.div initial='out' animate='in' exit='out' variants={pageTransition}> */}
                 <Title>About Me</Title>
+                <ContentBox>
                 <Quote>
                     "The capacity to learn is a gift; the ability to learn is a skill; the
                     willingness to learn is a choice" by Brian Herbert.
@@ -29,7 +30,8 @@ export default function AboutMe() {
                     
                     Please take a look at my <a href={"https://docs.google.com/document/d/1Bs_AcqabonMY9W_fLDuYuoivyalXjxChgdWkyGolXEY/edit"} type="ResumeLink" target="_blank"> Resume</a>.
                 </Content>
-            {/* </motion.div> */}
+                </ContentBox>
+    {/* </motion.div> */}
         </Container>
     );
 }
@@ -44,18 +46,28 @@ export default function AboutMe() {
 //     flex-wrap: wrap;
 //     }
 //     `
+const ContentBox= styled.div`
+    margin-left: 60px;
+    margin-right: 60px;
+    overflow:scroll;
+@media(min-width:360px) and (max-width:760px){
+    margin-left: 0px;
+    margin-right: 0px;
+}
+`;
 const Quote = styled.h1`
     font-family: 'Bad Script', cursive;
     border-bottom: 4px solid #5f48266b;
     padding: 12px;
     font-size:16px;
     line-height:25px;
+    margin-bottom:25px;
 @media(min-width:360px)and(max-width:760px){
     font-size: 15px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
-    /* background: radial-gradient(black, transparent); */
+    
 `;
 
 const Content = styled.h1`
@@ -77,5 +89,4 @@ const Content = styled.h1`
         
     }
     
-    /* background: radial-gradient(black, transparent); */
 `;
