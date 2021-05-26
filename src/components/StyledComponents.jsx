@@ -51,7 +51,7 @@ export const Container = styled.div`
     align-content: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin:180px 10px 10px 10px;
+    margin:180px 20px 10px 20px;
     flex-direction: column;
     flex-wrap: nowrap;
     overflow: scroll;
@@ -74,7 +74,7 @@ export const Container2= styled.div`
     backdrop-filter: brightness(0.2);
     border-top:4px solid #654c29;
     position: relative;
-    margin: 180px 10px 10px;
+    margin: 180px 20px 20px;
     padding-left: 15px;
     padding-right: 15px;
     height: auto;
@@ -97,7 +97,7 @@ export const Container3= styled.div`
     padding-bottom: 20px;
     @media(min-width:320px) and (max-width:600px){
     position:relative;
-    margin: 180px 10px 10px;
+    margin: 180px 20px 20px;
     padding-bottom: 10px;
     }
 `

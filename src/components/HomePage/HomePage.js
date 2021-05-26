@@ -37,7 +37,7 @@ const HomeCover = styled.div`
     @media(min-width:322px) and (max-width:600px){
     overflow:hidden;
     margin-top:0px;
-    margin: 10px;
+    margin: 0px 20px 20px;
     }
     
 `;

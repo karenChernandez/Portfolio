@@ -44,7 +44,7 @@ const EducationCont = styled.div`
     backdrop-filter: brightness(0.2);
     border-top:4px solid #654c29;
     position: relative;
-    margin: 180px 10px 10px;
+    margin: 180px 20px 20px;
     display: flex;
     justify-content: start;
     align-items: center;
