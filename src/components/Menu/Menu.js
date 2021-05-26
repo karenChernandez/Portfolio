@@ -102,7 +102,7 @@ const MenuTap = styled.div`
 
 const MenuHeader = styled.div`
     width: 100%;
-    height: 195px;
+    height: 190px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,7 +112,7 @@ const MenuHeader = styled.div`
         display:none;
     }
     @media(max-width:600px){
-        height: none;
+        height: 155px;
         margin-top:0px;
         display: flex;
         flex-direction: row-reverse;

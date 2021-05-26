@@ -40,7 +40,6 @@ const EducationCont = styled.div`
     margin: 10px 30px 10px 230px;
     font-size: 15px;
     background: radial-gradient(#00000052, transparent);
-    height: 100%;
 @media(min-width:322px) and (max-width:600px){
     backdrop-filter: brightness(0.2);
     border-top:4px solid #654c29;
@@ -50,7 +49,7 @@ const EducationCont = styled.div`
     justify-content: start;
     align-items: center;
     align-content: center;
-    height:auto;
+    /* height:auto; */
 }
 `;
 
