@@ -101,14 +101,13 @@ const ProjectImage = styled.img`
     height: 250px;
     border-radius: 10%;
     opacity: 0.3;
-    transition: opacity 0.25s ease-in-out;
-    -moz-transition: opacity 0.25s ease-in-out;
-    -webkit-transition: opacity 0.25s ease-in-out;
-    /* border: 3px black solid; */
+    transition: 0.25s ease-out;
+    
     &:hover {
-        width:240px;
-        height:237px;
-        opacity: 1 ease-in-Out;
+        /* width:240px;
+        height:2px; */
+        opacity: 1;
+        transition:0.25 ease-in-out;
         /* @include easeOut; */
     }
 `;
