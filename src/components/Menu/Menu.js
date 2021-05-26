@@ -2,6 +2,8 @@ import React,{useState}from 'react';
 import profilePicII from '../../images/me.jpg';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { GiHamburgerMenu} from 'react-icons/gi';
+
 // import { motion } from 'framer-motion';
 
 
@@ -10,15 +12,15 @@ export default function Menu() {
     return (
         <MenuTap>
             <MenuHeader >
-                <ProfilePic src={profilePicII} />
-                <Title>Karen Hernandez</Title>
-                <SubTitle>Full-Stack Software Developer</SubTitle>
+
+                <GiHamburgerMenu onClick={()=>setMenuOpen(!MenuOpen)}/>
+            
+                <div>
+                    <ProfilePic src={profilePicII} />
+                    <Title>Karen Hernandez</Title>
+                    <SubTitle>Full-Stack Software Developer</SubTitle>
+                 </div>
             </MenuHeader>
-            <Hamburger onClick={()=>setMenuOpen(!MenuOpen)}>
-                <span/>
-                <span/>
-                <span/>
-            </Hamburger>
 
             <LinkTabs MenuOpen={MenuOpen}>
                 <TabList>
@@ -62,18 +64,12 @@ const Title = styled.h1`
     line-height: 25px;
     padding-top: 2px;
     padding-bottom: 15px;
-    /* @media(max-width:760px){
-        display:none; 
-    } */
 `;
 const ProfilePic = styled.img`
     height: 81px;
     width: 91px;
     border-radius: 37px;
     border: 3px solid #654c29;
- /* @media(max-width:760px){
-        display:none; 
-    } */
      
 `;
 const MenuTap = styled.div`
@@ -95,61 +91,52 @@ const MenuTap = styled.div`
     position: fixed;
     background-color: #1f1f1f;
     box-shadow: 0 0 15px 1px #654c29;
-    @media(max-width:760px){
+    @media(max-width:600px){
         width: 100%;
         position:absolute;
+        padding:20px;
+        box-shadow:none;
     } 
     
 `;
 
-const MenuHeader = styled.span`
-    
+const MenuHeader = styled.div`
     width: 100%;
-    height: 180px;
-    padding-top: 27px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    
-    @media(max-width:760px){
-        padding-top:10px;
-        height: 0;
-        border-top-width: 10px;
+    height: 205px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    & svg{
+        display:none;
     }
-    
-
+    @media(max-width:600px){
+        height: none;
+        margin-top:0px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: stretch;
+        align-items: flex-start;
+        position: relative;
+    & svg{
+        display: flex;
+        font-size:25px;
+        position: absolute;
+        flex-direction: row-reverse;
+        align-content: center;
+        justify-content: flex-end;
+        align-items: center;
+        right: 0;
+        }
+    }
 `;
+
 const SubTitle = styled.span`
     width: 100%;
     font-size: 16px;
     font-weight: bolder;
     margin-bottom: 20px;
-    /* @media(max-width:760px){
-        display:none; 
-    } */
-    /* text-shadow: 1px 1px 5px #1f1f1f; */
-`;
-
-const Hamburger= styled.div`
-    display:none;
-    flex-direction:column;
-    cursor: pointer;
-    margin-bottom:120px;
-    margin-left: 90%;
-    span{
-        /* margin-left: 340px; */
-        height:2px;
-        width:25px;
-        background-color:#654c29;
-        margin-bottom:4px;
-        border-radius:5px;
-
-    }
-    @media(max-width:760px) and (min-width:360px){
-        display:flex;
-        flex-direction:end;
-        /* margin-bottom:120px; */
-        /* margin-left:-15px; */
-    }
 `;
 
 const LinkTabs = styled.nav`
@@ -157,21 +144,18 @@ const LinkTabs = styled.nav`
     height: 90%;
     z-index: 1000;
     padding-bottom: 10px;
-    margin: 51px 0px 10px;
-
+    margin-top:0px;
+    margin-bottom:0px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     position:relative;
-    
-    
-@media(max-width:760px){
+@media(max-width:600px){
     margin-bottom: 0px;
     overflow:hidden;
     flex-direction:column;
     width:100%;
     background:rgb(95 72 38 / 92%);
-    /* background:#654c29; */
     margin-top: 5px;
     padding-bottom: 0px;
     max-height:${({MenuOpen})=>(MenuOpen ? "370px" : "0") };
@@ -191,10 +175,15 @@ const TabLink = styled.a`
 
 `;
 const ListTap = styled.li`
-    padding: 22px 0 12px;
-    font-size: 21.5px;
+    font-size: 20px;
     padding-left: 40px;
-        @media(max-width:760px){
+    width:100%;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    @media(max-width:600px){
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 0px;
@@ -208,29 +197,20 @@ const TabList = styled.ul`
     justify-content: flex-start;
     align-items: flex-start;
     align-content: space-around;
-    padding: 10px 4px 28px 0px;
+    padding: 10px 4px;
     font-size: 16.5px;
     backdrop-filter: brightness(0.5);
     border-top-style: solid;
     color: #654c29;
-    height: 100%;
+    height: 95%;
     width:100%;
     list-style: none;
-    /* & a :hover:after{
-        content:'';
-        text-decoration: underline;
-        transition:0.3s;
-    } */
-    @media(max-width:760px){
+    @media(max-width:600px){
     align-items: stretch;
     width: 100%;
     }
-`;
-// const ResumeLink=styled.a`
-// text-decoration:none;
-// color:white;
-// font-size:20px;
-// `
+`
+;
 // const Button = styled.button`
 //     background-color: black;
 //     color: WHITE;

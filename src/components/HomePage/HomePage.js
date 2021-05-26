@@ -18,14 +18,11 @@ export default function HomePage() {
                             to my portfolio! 
                         </Title>
                         <IntroII>
-                            I am full-stack web-developer from PHX, AZ. My tech stack is PERN and I enjoy creating web applications from the ground up.
+                            I am full-stack web-developer from PHX, AZ. My tech stack is PERN and I enjoy creating web applications from the ground up. <LearnMore href='/AboutMe'>Learn more</LearnMore>
                             {/* I am a Full-Stack Software Developer with a Bachelors Degree in
                             Business. I recently graduated from DevMoutain, a coding bootcamp. I
                             have an extensive background in various frontend and backend
                             technologies such as JavaScript, React, NodeJS, PostgreSQL, HTML, CSS and more. */}
-                            {/* <br /> */}
-
-                            <LearnMore href='/AboutMe'>Learn more</LearnMore>
                         </IntroII>
                     </Intro>
                 </Home>
@@ -36,7 +33,8 @@ export default function HomePage() {
 const HomeCover = styled.div`
     background-color: #141515;
     margin-left: 190px;
-    @media(min-width:360px) and (max-width:760px){
+    width:100%;
+    @media(min-width:322px) and (max-width:600px){
     overflow:hidden;
     margin-top:0px;
     margin: 10px;
@@ -58,10 +56,8 @@ const Home = styled.div`
     }
     & div:hover ~ img{
         filter:blur(0px);
-        /* transform:scale(1.2);
-        transition: 3s; */
     }
-     @media(min-width:360px) and (max-width:760px){
+     @media(min-width:322px) and (max-width:600px){
     z-index:none;
     backdrop-filter: brightness(0.2);
     height: 100%;
@@ -82,22 +78,21 @@ const Me = styled.img`
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
-   @media(min-width:360px) and (max-width:760px){
+   @media(min-width:322px) and (max-width:600px){
     display:none;}
-   @media(min-width:761px) and (max-width:1024px){
+   @media(min-width:601px) and (max-width:1024px){
     margin-left:0px;
    }  
     
 `;
 
 const Intro = styled.div`
-    /* position: absolute; */
     margin-top: 43%;
     margin-left: 28px;
     transform: translate(0%, -320%);
     width: 535px;
     height: 321px;
-    @media(min-width:360px) and (max-width:760px){
+    @media(min-width:322px) and (max-width:600px){
             border-top:4px solid #654c29;
             position:relative;
             display:flex;
@@ -105,18 +100,18 @@ const Intro = styled.div`
             align-content:center;
             justify-content:flex-start;
             flex-direction:column;
-            margin-top:50%;
+            margin-top:180px;
             width:100%;
             margin-left:0px;
             transform:none;
         }
-    @media(min-width:761px) and (max-width:1024px){
+    @media(min-width:601px) and (max-width:1024px){
     margin-top:0px;
     margin-left:0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translate(5%, -119%);
+    transform: translate(-5%, -85%);
     }
 `;
 const IntroII = styled.h3`
@@ -126,11 +121,10 @@ const IntroII = styled.h3`
     line-height: 22px;
     color: white;
     a:hover{
-        /* color: #654c29; */
         text-decoration:underline;
         font-size:20px;
     }
-    @media(min-width:360px) and (max-width:760px){
+    @media(min-width:322px) and (max-width:600px){
         display:flex;
         flex-direction:column;
         align-items:center;
@@ -143,7 +137,6 @@ const IntroII = styled.h3`
         padding-right: 30px;
         position: relative;
         margin-top: 39px;
-    /* transform: translate(-8%, 447%); */
     }
 `;
 const Title = styled.mark`
@@ -161,7 +154,7 @@ const Title = styled.mark`
     &:nth-of-type(2) span {
         background-clip: content-box;
     }
-    @media(min-width:360px) and (max-width:760px){
+    @media(min-width:322px) and (max-width:600px){
     flex-direction:column;
     justify-content:start;
     align-items:center;
@@ -171,7 +164,7 @@ const Title = styled.mark`
     margin-top:10%;
     width:95%;
     }
-    @media(min-width:761px) and (max-width:1024px){
+    @media(min-width:601px) and (max-width:1024px){
         font-size:40px;
         line-height:55px;
     }
@@ -184,7 +177,7 @@ const LearnMore = styled.a`
     font-weight: 600;
     color: #654c29;
     text-decoration:none;
-     @media(min-width:360px) and (max-width:760px){
+     @media(min-width:322px) and (max-width:600px){
             font-size:15px;
         }
 `;

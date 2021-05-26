@@ -35,22 +35,11 @@ export default function AboutMe() {
         </Container>
     );
 }
-// const ContainerBox= styled.div`
-// font-size:16px;
-// @media(min-width:360px) and (max-width:760px){
-//     justify-content: center;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     align-content: center;
-//     flex-wrap: wrap;
-//     }
-//     `
 const ContentBox= styled.div`
     margin-left: 60px;
     margin-right: 60px;
     overflow:scroll;
-@media(min-width:360px) and (max-width:760px){
+@media(min-width:322px) and (max-width:760px){
     margin-left: 0px;
     margin-right: 0px;
 }
@@ -62,7 +51,7 @@ const Quote = styled.h1`
     font-size:16px;
     line-height:25px;
     margin-bottom:25px;
-@media(min-width:360px)and(max-width:760px){
+@media(min-width:322px)and(max-width:600px){
     font-size: 15px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -78,12 +67,10 @@ const Content = styled.h1`
     & a{
         text-decoration:none;
         color:#654c29;
-        /* color: #bc8c2d; */
         font-size:16px;
 
     }
     a:hover{
-        /* color: #654c29; */
         text-decoration:underline;
         font-size:17px;
         

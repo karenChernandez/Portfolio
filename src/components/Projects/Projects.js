@@ -83,7 +83,7 @@ const ProjectBox = styled.div`
     font-size: 15px;
     /* border-bottom: 4px solid #654c29; */
     border-bottom: 4px solid #5f48266b;
-@media(min-width:320px) and (max-width:768px){
+@media(min-width:320px) and (max-width:977px){
     margin:20px;
     display: flex;
     flex-direction: column;
@@ -118,7 +118,7 @@ const ProjectText = styled.div`
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 45px;
-    @media(min-width:320px) and (max-width:768px){
+    @media(min-width:320px) and (max-width:600px){
     width:100%;
     padding-top:15px;
     justify-content:center;

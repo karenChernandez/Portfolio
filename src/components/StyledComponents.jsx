@@ -11,7 +11,7 @@ export const Title = styled.h1`
     margin-bottom:20px;
     margin-top:20px;
     color:white;
-    @media(min-width:360px) and (max-width:760px){
+    @media(min-width:322px) and (max-width:600px){
         /* margin-top:55%; */
     margin-bottom:20px;
     }
@@ -39,7 +39,7 @@ export const Container = styled.div`
     flex-wrap:nowrap;
     margin: 10px 30px 10px 230px;
 
-@media(min-width:320px) and (max-width:760px){
+@media(min-width:322px) and (max-width:600px){
     backdrop-filter: brightness(0.2);
     border-top:4px solid #654c29;
     /* height: 100%; */
@@ -51,7 +51,7 @@ export const Container = styled.div`
     align-content: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 45% 10px 10px 10px;
+    margin:180px 10px 10px 10px;
     flex-direction: column;
     flex-wrap: nowrap;
     overflow: scroll;
@@ -70,19 +70,14 @@ export const Container2= styled.div`
     align-content: center;
     align-items:center;
 
-    @media(min-width:320px) and (max-width:760px){
+    @media(min-width:322px) and (max-width:600px){
     backdrop-filter: brightness(0.2);
     border-top:4px solid #654c29;
     position: relative;
-    margin-bottom:0px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 180px 10px 10px;
     padding-left: 15px;
     padding-right: 15px;
     height: auto;
-    margin-bottom: 10px;
-    /* margin: 43% 10px 10px; */
-    margin-top:45%;
     }
 
 
@@ -98,12 +93,11 @@ export const Container3= styled.div`
     color:white;
     font-size:15px;
     width:100%;
-    /* height: 100%; */
     overflow-y:scroll;
     padding-bottom: 20px;
-    @media(min-width:320px) and (max-width:760px){
+    @media(min-width:320px) and (max-width:600px){
     position:relative;
-    margin: 45% 10px 10px;
+    margin: 180px 10px 10px;
     padding-bottom: 10px;
     }
 `

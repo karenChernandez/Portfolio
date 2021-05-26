@@ -80,8 +80,8 @@ export default function Skills() {
                             <h3>React</h3>
                         </Icon>
                         <Icon>
-                            <FaNodeJs />
-                            <h3>NodeJS</h3>
+                            <SiRedux />
+                            <h3>Redux</h3>
                         </Icon>
                     </Icons>
                 </Box>
@@ -93,8 +93,8 @@ export default function Skills() {
                             <h3>PostgreSQL</h3>
                         </Icon>
                         <Icon>
-                            <SiRedux />
-                            <h3>Redux</h3>
+                            <FaNodeJs />
+                            <h3>NodeJS</h3>
                         </Icon>
                         <Icon>
                             <h3>Express</h3>

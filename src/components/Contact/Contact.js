@@ -96,7 +96,7 @@ export default function Contact() {
                         <ContactInfo>
                            <SocialMediaIcons><FaEnvelope/></SocialMediaIcons>
                             <h2>Email:</h2>
-                            <h1>karenChernandez@live.com</h1>
+                            <h3>karenChernandez@live.com</h3>
                         </ContactInfo>
 
                         <ContactInfo>
@@ -140,7 +140,7 @@ const ContactBox = styled.div`
     align-items: center;
     margin-top:3%;
     /* margin: 10px 30px 10px 230px; */
-    @media(min-width:320px) and (max-width:768px){
+    @media(min-width:322px) and (max-width:768px){
     display: flex;
     flex-wrap:wrap;
     flex-direction: column;
@@ -155,7 +155,7 @@ const Box = styled.div`
     width: 50%;
     padding-bottom: 5%;
     margin-left: 20px;
-    @media(min-width:320px) and (max-width:768px){
+    @media(min-width:322px) and (max-width:768px){
         width:100%;
         margin-left:0px;
     }
@@ -179,12 +179,10 @@ const TextBox = styled.textarea`
     width: 90%;
     height: 30%;
     border: none;
-    /* background-color: lightgray; */
     background-color: #5f48266b;
 `;
 
 const ContactInfo = styled.section`
-    /* width: 100%; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -196,13 +194,11 @@ const ContactInfo = styled.section`
         font-size:15px;
         margin-right:5px;
     }
-    & h1{
+    & h3{
         font-size:14px;
     }
     & a:hover{
-        /* color: #654c29; */
         text-decoration:underline;
-        font-size:14px;
         
     }
     
@@ -211,11 +207,7 @@ const ALink = styled.a`
     text-decoration: none;
     color: white;
     padding-left: 2px;
-    /* & a::after {
-        animation: anchor-underline 2s cubic-bezier(0, 0.5, 0, 1) infinite;
-        border-top: 1em solid #457dfb;
-    } */
-   
+    font-size:14px;
 `;
 const fly = keyframes`
     0% {transform: translateX(0%)}
@@ -227,7 +219,7 @@ const Button = styled.button`
     border: none;
     color: black;
     padding: 5px;
-    border-radius: 10%;
+    border-radius: 4px;
     width: 90%;
     font-size: 15px;
     font-family: bold;
