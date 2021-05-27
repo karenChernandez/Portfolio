@@ -81,7 +81,7 @@ export default function Contact() {
                         />
                         <br />
                         <Button type='submit' onClick={handleSubmit}>
-                            Send it!
+                            Send it! 
                             <i>
                                 <FaTelegramPlane className='svg' />
                             </i>
@@ -223,12 +223,13 @@ const Button = styled.button`
     width: 90%;
     font-size: 15px;
     font-family: bold;
-    margin-top: 2%;
-    margin-left: 2%;
+    margin-top: 5px;
+    margin-bottom: 5px;
     & .svg {
   display: inline-block;
   vertical-align: middle;
   padding-right: 2px;
+  margin-left: 10px;
 }
     &:hover .svg {
   animation: ${fly} 2s ease 1;
