@@ -22,11 +22,18 @@ export default function Projects() {
                     <ProjectText>
                         <LinkTab href='https://zeppi.site/'>ZEPPI</LinkTab>
                         <p>
-                            This is a collaborated project with two fellow students.ZEPPI is a location-based message web application with a twist of
+                            Designed a treasure hunt message web application with integrated maps, and geolocation for a fresh and interactive business and user experience. In this App users were enable to send(drop) or receive(loot) messages which can be claimed on a map:<br/>
+                            * Geolocation API was used to track device location<br/>
+                            * Cube/Earthdistance PostgreSQL extensions used to create a radius and help match a location<br/>
+                            Developed components with React for core functionalities and reusability.
+                            This project was in collaboration with 2 remote developers using Github and Trello in a remote environment
+                            
+                            </p>
+                            
+                            {/* This is a collaborated project with two fellow students.ZEPPI is a location-based message web application with a twist of
                             creativity. This application uses maps, geolocation and messaging to
                             give users an easy and fun way to communicate. Users send(drop) or
-                            receive(loot) messages from friends which can be claimed on a map.
-                        </p>
+                            receive(loot) messages from friends which can be claimed on a map. */}
                     </ProjectText>
                 </ProjectBox>
 
@@ -36,11 +43,14 @@ export default function Projects() {
                     <ProjectText>
                         <LinkTab>My Bootcamp Journal</LinkTab>
                         <p>
-                            An EASY-TO-USE Goal Oriented Journal App that helps the user stay
+                            Developed an easy to use Goal Oriented Journal App using React for core functionalities and reusability.
+                            Used Redux and Redux-Promise Middleware for container structure.Integrated RESTful API with Node for route organization, error handling, create, access, query, and editing multiple relational MySQL and PostgreSQL databases.Provided authentication and user credentials using Express Session and Bcrypt allowing users to register/sign-in and enter main objective, micro-goals.Created a calendar component using React- Calendar library and MomentJS to display to-dos and notes that are rendered by a click event.
+
+                            {/* An EASY-TO-USE Goal Oriented Journal App that helps the user stay
                             organized in a fast-paced environment. Users can register/sign-in to
                             enter their main objective and micro goals. It also provides a section
                             to add to-dos and a Calendar where the to-do lists are being rendered
-                            and a section for important notes.
+                            and a section for important notes. */}
                         </p>
                     </ProjectText>
                 </ProjectBox>
@@ -50,10 +60,13 @@ export default function Projects() {
                     <ProjectText>
                         <LinkTab>My Book Store</LinkTab>
                         <p>
-                            This is the first project I worked on while attending DevMountain. Is an
+                            Developed an e-commerce site with no database using React for core functionalities and reusability.Developed RESTful API with NodeJS for route organization, error handling and to create, access, query and edit data from a JSON file.
+                            Use lifecycles methods such as componentDidMount to fetch data in React and integrated styling using CSS.
+
+                            {/* This is the first project I worked on while attending DevMountain. Is an
                             e-commerce app with no database. It’s intended to display products and
                             allows you to add or delete items to the cart and complete the
-                            transaction.
+                            transaction. */}
                         </p>
                     </ProjectText>
                 </ProjectBox>
@@ -113,10 +126,8 @@ const ProjectImage = styled.img`
 `;
 const ProjectText = styled.div`
     width: 420px;
-    height: 340px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 45px;
+    /* height: 340px; */
+    padding:10px 25px;
     @media(min-width:320px) and (max-width:600px){
     width:100%;
     padding-top:15px;

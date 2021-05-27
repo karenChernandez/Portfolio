@@ -153,7 +153,7 @@ const ContactBox = styled.div`
 
 const Box = styled.div`
     width: 50%;
-    padding-bottom: 5%;
+    /* padding-bottom: 5%; */
     margin-left: 20px;
     @media(min-width:322px) and (max-width:768px){
         width:100%;
