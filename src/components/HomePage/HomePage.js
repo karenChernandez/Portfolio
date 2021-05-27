@@ -14,11 +14,12 @@ export default function HomePage() {
                     <Intro>
                         <Title>
                             {/* Hello! Welcome <br/>to my personal portfolio! */}
-                            Hello World! Welcome <br />
-                            to my portfolio! 
+                            Hello World! 
+                            {/* Welcome <br />
+                            to my portfolio!  */}
                         </Title>
                         <IntroII>
-                            I am full-stack web-developer from PHX, AZ. My tech stack is PERN and I enjoy creating web applications from the ground up. <LearnMore href='/AboutMe'>Learn more</LearnMore>
+                            My name is Karen Hernandez, I am full-stack web-developer from PHX, AZ. Welcome to my personal website!<br/> <LearnMore href='/AboutMe'>Learn more</LearnMore>
                             {/* I am a Full-Stack Software Developer with a Bachelors Degree in
                             Business. I recently graduated from DevMoutain, a coding bootcamp. I
                             have an extensive background in various frontend and backend
@@ -90,7 +91,7 @@ const Intro = styled.div`
     margin-top: 43%;
     margin-left: 28px;
     transform: translate(0%, -320%);
-    width: 535px;
+    width: 341px;
     height: 321px;
     @media(min-width:322px) and (max-width:600px){
             border-top:4px solid #654c29;
@@ -111,7 +112,7 @@ const Intro = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translate(-5%, -85%);
+    transform: translate(5%, -85%);
     }
 `;
 const IntroII = styled.h3`

@@ -14,7 +14,8 @@ export default function AboutMe() {
                     willingness to learn is a choice" by Brian Herbert.
                 </Quote>
                 <Content>
-                    Hi my name is Karen, I am a Full-Stack Software Developer with a Bachelors
+                    {/* Hi my name is Karen,  */}
+                    I am a Full-Stack Software Developer with a Bachelors
                     Degree in Business. I recently graduated from DevMoutain, a coding Bootcamp. I
                     have an extensive background in various frontend and backend technologies,
                     developed websites and web applications from the ground up. Specializes in
@@ -28,7 +29,7 @@ export default function AboutMe() {
                     as Entry Level Software Engineer position, where I can use and expand my
                     knowledge. 
                     
-                    Please take a look at my <a href={"https://docs.google.com/document/d/1Bs_AcqabonMY9W_fLDuYuoivyalXjxChgdWkyGolXEY/edit"} type="ResumeLink" target="_blank"> Resume</a>.
+                    Please take a look at my <a href={"https://docs.google.com/document/d/1Bs_AcqabonMY9W_fLDuYuoivyalXjxChgdWkyGolXEY/edit"} type="ResumeLink" target="_blank">Online Resume</a>.
                 </Content>
                 </ContentBox>
     {/* </motion.div> */}
