@@ -4,6 +4,7 @@ import zeppi from './../../images/zeppi.png';
 import myBookStore from './../../images/myBookStoreApp.png';
 import styled from 'styled-components';
 import { Title, Container2, pageTransition } from '../StyledComponents';
+import {FaGithub} from 'react-icons/fa';
 // import { motion } from 'framer-motion';
 
 export default function Projects() {
@@ -13,11 +14,15 @@ export default function Projects() {
                 <Title1>Projects</Title1>
 
                 <ProjectBox>
-                    <div>
+                    <ImgAndRepoLink>
                         <a href='https://zeppi.site/'>
                             <ProjectImage src={zeppi} />
                         </a>
-                    </div>
+                        <RepoLink>
+                        <FaGithub/>
+                        <a href='https://github.com/karenChernandez/zeppi'>Github Repo</a>
+                        </RepoLink>
+                    </ImgAndRepoLink>
 
                     <ProjectText>
                         <LinkTab href='https://zeppi.site/'>ZEPPI</LinkTab>
@@ -38,7 +43,13 @@ export default function Projects() {
                 </ProjectBox>
 
                 <ProjectBox>
-                    <ProjectImage src={myBootcampJournal} />
+                     <ImgAndRepoLink>
+                    <ProjectImage src={myBootcampJournal} /> 
+                    <RepoLink>
+                        <FaGithub/>
+                        <a href='https://github.com/karenChernandez/firstPersonalProject'>Github Repo</a>
+                    </RepoLink>
+                     </ImgAndRepoLink>
 
                     <ProjectText>
                         <LinkTab>My Bootcamp Journal</LinkTab>
@@ -56,7 +67,15 @@ export default function Projects() {
                 </ProjectBox>
 
                 <ProjectBox>
+
+                    <ImgAndRepoLink>
                     <ProjectImage src={myBookStore} />
+                    <RepoLink>
+                        <FaGithub/>
+                        <a href='https://github.com/karenChernandez/NoDB'>Github Repo</a>
+                        </RepoLink>
+                     </ImgAndRepoLink>
+
                     <ProjectText>
                         <LinkTab>My Book Store</LinkTab>
                         <p>
@@ -135,6 +154,27 @@ const ProjectText = styled.div`
 
     }
 `;
+const ImgAndRepoLink = styled.div`
+    display:flex;
+    flex-direction:column;
+    `
+const RepoLink = styled.div`
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+    margin:10px;
+    font-size:18px;
+& a{
+    text-decoration:none;
+    color:whitesmoke;
+    font-family:bold;
+    margin-left:5px;
+    
+}
+
+`
 const LinkTab = styled.a`
     text-decoration: none;
     color: white;
