@@ -18,13 +18,13 @@ export default function AboutMe() {
                     I am a Full-Stack Software Developer with a Bachelors
                     Degree in Business. I recently graduated from DevMoutain, a coding Bootcamp. I
                     have an extensive background in various frontend and backend technologies,
-                    developed websites and web applications from the ground up. Specializes in
+                    developed websites and web applications from the ground up. Specialized in
                     JavaScript, React, Redux, Node.js, PostgreSQL, Express, HTML5 and CSS. Professional
                     strengths include creative problem-solving and time management. A
                     Detail-oriented mindset from 8 years of experience in the Finance industry.
                 </Content>
                 <Content>
-                    I am a motivated, hardworking individual with hands on experience in creating
+                    I am a motivated, hardworking individual with handsOn experience in creating
                     web applications with an emphasis on PERN stack. Seeking a Full-time employment
                     as Entry Level Software Engineer position, where I can use and expand my
                     knowledge. 
