@@ -44,7 +44,7 @@ const EducationCont = styled.div`
     backdrop-filter: brightness(0.2);
     border-top:4px solid #654c29;
     position: relative;
-    margin: 180px 20px 20px;
+    margin: 0px 20px 20px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -76,5 +76,9 @@ const Box = styled.div`
     }
     & h2 {
         font-size: 15px;
+    }
+    @media(min-width:322px) and (max-width:600px){
+    margin-left: 10px;
+    margin-right: 10px;
     }
 `;

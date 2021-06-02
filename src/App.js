@@ -17,9 +17,11 @@ function App() {
     );
 }
 const AppBackground= styled.div`
+  background: #0a0d0b;
   text-align: center;
   display: flex;
   height: 100%;
+  overflow: scroll;
 @media(min-width:322px) and (max-width:600px){
     display: flex;
     height: 100%;

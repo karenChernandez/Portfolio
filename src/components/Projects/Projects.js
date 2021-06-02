@@ -100,8 +100,11 @@ const Title1 = styled.h1`
     width: fit-content;
     font-size: 30px;
     font-weight: 200;
-    margin-bottom: 20px;
+    margin:15px 0px;
     border-bottom: 4px solid white;
+    @media(min-width:322px) and (max-width:600px){
+    margin:10px 0px;
+    }
 `;
 const ProjectBox = styled.div`
     display: flex;
@@ -110,18 +113,15 @@ const ProjectBox = styled.div`
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    /* background: radial-gradient(black, transparent); */
     margin-bottom: 23px;
     font-size: 15px;
-    /* border-bottom: 4px solid #654c29; */
     border-bottom: 4px solid #5f48266b;
 @media(min-width:320px) and (max-width:977px){
-    margin:20px;
+    margin:5px;
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
     & p {
-        /* width:100%; */
         padding:20px;
         margin:0;
         justify-content:center;
@@ -136,16 +136,12 @@ const ProjectImage = styled.img`
     transition: 0.25s ease-out;
     
     &:hover {
-        /* width:240px;
-        height:2px; */
         opacity: 1;
         transition:0.25 ease-in-out;
-        /* @include easeOut; */
     }
 `;
 const ProjectText = styled.div`
     width: 420px;
-    /* height: 340px; */
     padding:10px 25px;
     @media(min-width:320px) and (max-width:600px){
     width:100%;

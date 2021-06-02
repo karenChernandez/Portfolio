@@ -1,19 +1,16 @@
 import styled from 'styled-components';
 
 export const Title = styled.h1`
-    margin:0px;
     font-size: 30px;
     font-weight: 200;
     width: fit-content;
     display: flex;
     align-self: center;
     border-bottom: 4px solid white;
-    margin-bottom:20px;
-    margin-top:20px;
+    margin:20px 0px;
     color:white;
     @media(min-width:322px) and (max-width:600px){
-        /* margin-top:55%; */
-    margin-bottom:20px;
+    margin:10px 0px;
     }
 `
 export const Title2= styled(Title)`
@@ -21,7 +18,10 @@ export const Title2= styled(Title)`
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin-top:20px;
+    margin:20px 0px;
+    @media(min-width:322px) and (max-width:600px){
+    margin:10px 0px;
+    }
 `
 export const Container = styled.div`
     color:white;
@@ -40,7 +40,8 @@ export const Container = styled.div`
     margin: 10px 30px 10px 230px;
 
 @media(min-width:322px) and (max-width:600px){
-    backdrop-filter: brightness(0.2);
+    backdrop-filter: brightness(0.5);
+    
     border-top:4px solid #654c29;
     /* height: 100%; */
     position:relative;
@@ -51,7 +52,7 @@ export const Container = styled.div`
     align-content: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin:180px 20px 10px 20px;
+    margin:0px 20px 10px 20px;
     flex-direction: column;
     flex-wrap: nowrap;
     overflow: scroll;
@@ -71,10 +72,10 @@ export const Container2= styled.div`
     align-items:center;
 
     @media(min-width:322px) and (max-width:600px){
-    backdrop-filter: brightness(0.2);
+    backdrop-filter: brightness(0.5);
     border-top:4px solid #654c29;
     position: relative;
-    margin: 180px 20px 20px;
+    margin: 0px 20px 20px;
     padding-left: 15px;
     padding-right: 15px;
     height: auto;
@@ -96,8 +97,9 @@ export const Container3= styled.div`
     overflow-y:scroll;
     padding-bottom: 20px;
     @media(min-width:320px) and (max-width:600px){
+    backdrop-filter: brightness(0.5);
     position:relative;
-    margin: 180px 20px 20px;
+    margin: 0px 20px 20px;
     padding-bottom: 10px;
     }
 `

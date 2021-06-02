@@ -38,8 +38,8 @@ const HomeCover = styled.div`
     @media(max-width:600px) {
     overflow:hidden;
     margin: 0px;
-    background-color: inherit;
-    backdrop-filter: brightness(0.3);
+    background-color: transparent;
+    backdrop-filter: brightness(0.5);
     height: 100%;
 
     }

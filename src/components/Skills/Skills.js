@@ -158,12 +158,13 @@ const Box = styled.div`
     margin-bottom: 20px;
     border: 4px solid #5f48266b;
     @media(min-width:320px) and (max-width:760px){
-    backdrop-filter: brightness(0.2);
+    backdrop-filter: brightness(0.5);
+    margin: 10px;
     }
 `;
 const BoxTitle = styled.h1`
     border-bottom: 4px solid #5f48266b;
-    font-size: 22px;
+    font-size: 25px;
     text-align: left;
     padding-bottom: 10px;
     margin: 10px;
@@ -172,7 +173,6 @@ const BoxTitle = styled.h1`
 const Icons = styled.div`
     height: 59px;
     color: white;
-    font-size: 45px;
     margin-left: 5px;
     display: flex;
     flex-direction: row;
@@ -188,5 +188,8 @@ const Icon = styled.div`
     font-size: 38px;
     & h3 {
         font-size: 10px;
+    }
+    @media(min-width:322px) and (max-width:600px){
+        font-size: 25px;
     }
 `;
