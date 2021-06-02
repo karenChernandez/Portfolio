@@ -89,13 +89,18 @@ const MenuTap = styled.div`
     height: 100%;
     width: 200px;
     position: fixed;
-    background-color: #1f1f1f;
+    /* background-color: #1f1f1f; */
     box-shadow: 0 0 15px 1px #654c29;
     @media(max-width:600px){
+        background-image: none;
+        backdrop-filter: brightness(0.5);
         width: 100%;
         position:absolute;
+        position: unset;
         padding:20px;
         box-shadow:none;
+        height: unset;
+        background-color: none;
     } 
     
 `;

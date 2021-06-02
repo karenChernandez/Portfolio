@@ -35,12 +35,14 @@ const HomeCover = styled.div`
     background-color: #141515;
     margin-left: 190px;
     width:100%;
-    @media(min-width:322px) and (max-width:600px){
+    @media(max-width:600px) {
     overflow:hidden;
-    margin-top:0px;
-    margin: 0px 20px 20px;
+    margin: 0px;
+    background-color: inherit;
+    backdrop-filter: brightness(0.3);
+    height: 100%;
+
     }
-    
 `;
 const Home = styled.div`
     height:100%;
@@ -60,8 +62,6 @@ const Home = styled.div`
     }
      @media(min-width:322px) and (max-width:600px){
     z-index:none;
-    backdrop-filter: brightness(0.2);
-    height: 100%;
      
     }
    
@@ -95,13 +95,14 @@ const Intro = styled.div`
     height: 321px;
     @media(min-width:322px) and (max-width:600px){
             border-top:4px solid #654c29;
-            position:relative;
+            position: unset;
+            height: 100%;
             display:flex;
             align-items:center;
             align-content:center;
             justify-content:flex-start;
             flex-direction:column;
-            margin-top:180px;
+            margin-top: 0px;
             width:100%;
             margin-left:0px;
             transform:none;
@@ -136,8 +137,7 @@ const IntroII = styled.h3`
         line-height: 22px;
         padding-left: 30px;
         padding-right: 30px;
-        position: relative;
-        margin-top: 39px;
+        position: unset;
     }
 `;
 const Title = styled.mark`
