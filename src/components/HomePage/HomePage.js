@@ -39,7 +39,7 @@ const HomeCover = styled.div`
     overflow:hidden;
     margin: 0px;
     background-color: transparent;
-    backdrop-filter: brightness(0.5);
+    backdrop-filter: brightness(0.2);
     height: 100%;
 
     }

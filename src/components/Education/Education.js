@@ -2,7 +2,7 @@ import React from 'react';
 import devMountain from './../../images/devMountainLogo.jpeg';
 import nau from './../../images/NAU1.png';
 import styled from 'styled-components';
-import { Title, Container3, pageTransition } from './../StyledComponents';
+import { Title} from './../StyledComponents';
 // import { motion } from 'framer-motion';
 
 export default function Education() {
@@ -12,11 +12,11 @@ export default function Education() {
                 <Title>Education</Title>
                 <Box>
                     <img src={devMountain} />
-                    <div>
+                    <ImgInfo>
                         <h2>2020</h2>
                         <h1>DevMountain</h1>
                         <h2>Full Stack Software Development</h2>
-                    </div>
+                    </ImgInfo>
                 </Box>
 
                 <Box>
@@ -64,7 +64,6 @@ const Box = styled.div`
     padding-top: 40px;
     padding-bottom: 40px;
     line-height: 13px;
-    /* background: radial-gradient(white, transparent); */
     border-bottom: 4px solid #5f48266b;
     & img {
         width: 187px;
@@ -77,8 +76,12 @@ const Box = styled.div`
     & h2 {
         font-size: 15px;
     }
+
     @media(min-width:322px) and (max-width:600px){
     margin-left: 10px;
     margin-right: 10px;
     }
 `;
+const ImgInfo= styled.div`
+    width: 190px;
+    `

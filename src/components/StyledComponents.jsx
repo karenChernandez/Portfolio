@@ -40,7 +40,7 @@ export const Container = styled.div`
     margin: 10px 30px 10px 230px;
 
 @media(min-width:322px) and (max-width:600px){
-    backdrop-filter: brightness(0.5);
+    backdrop-filter: brightness(0.2);
     
     border-top:4px solid #654c29;
     /* height: 100%; */
@@ -72,7 +72,7 @@ export const Container2= styled.div`
     align-items:center;
 
     @media(min-width:322px) and (max-width:600px){
-    backdrop-filter: brightness(0.5);
+    backdrop-filter: brightness(0.2);
     border-top:4px solid #654c29;
     position: relative;
     margin: 0px 20px 20px;
@@ -97,7 +97,7 @@ export const Container3= styled.div`
     overflow-y:scroll;
     padding-bottom: 20px;
     @media(min-width:320px) and (max-width:600px){
-    backdrop-filter: brightness(0.5);
+    backdrop-filter: brightness(0.2);
     position:relative;
     margin: 0px 20px 20px;
     padding-bottom: 10px;
